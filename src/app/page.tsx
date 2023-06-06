@@ -1,7 +1,18 @@
+'use client';
+
+import Career from '@/components/Career';
+import Introduction from '@/components/introduction';
+import styled from '@emotion/styled';
+
 export default function Home() {
   return (
-    <main>
-      <div>my name is byeong chan</div>
-    </main>
+    <Wrapper>
+      <Introduction />
+      <Career />
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  margin: 0 30px;
+`;
