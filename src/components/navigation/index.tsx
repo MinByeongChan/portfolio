@@ -1,10 +1,17 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import TextField from '@/components/TextField';
 
 export default function Navigation() {
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  console.log('first', scrollPosition);
+
+  useEffect(() => {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    console.log('first', scrollPosition);
+  }, []);
   return (
     <Nav>
       <NavLeftDiv>
@@ -33,12 +40,25 @@ export default function Navigation() {
 }
 
 const Nav = styled.nav`
-  min-height: 80px;
+  position: sticky;
+  top: 0;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 30px;
   border-bottom: 1px solid #fff;
+  &:before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    min-height: 69px;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(6px);
+    background: inherit;
+  }
 `;
 
 const NavLeftDiv = styled.div`
