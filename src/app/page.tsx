@@ -1,15 +1,17 @@
 'use client';
 
 import Career from '@/components/Career';
-import Introduction from '@/components/introduction';
+import Introduction from '@/components/Introduction';
 import styled from '@emotion/styled';
 
 export default function Home() {
   return (
-    <Wrapper>
-      <Introduction />
+    <>
+      <Wrapper>
+        <Introduction />
+      </Wrapper>
       <Career />
-    </Wrapper>
+    </>
   );
 }
 

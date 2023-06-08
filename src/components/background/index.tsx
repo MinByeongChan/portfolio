@@ -39,15 +39,3 @@ const BackgroundWrapper = styled.div<{ opacity: number }>`
   background-color: ${(props) => `rgba(0, 0, 0, ${props.opacity})`};
   z-index: 2;
 `;
-
-const Star1 = styled.div`
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  left: 30px;
-  top: 100px;
-  border-radius: 50%;
-  z-index: 3;
-  filter: blur(1.5px);
-`;

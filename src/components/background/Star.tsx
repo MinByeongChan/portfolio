@@ -16,7 +16,7 @@ export default function Star() {
 }
 
 const StarWrapper = styled.div<{ top: string; left: string }>`
-  position: absolute;
+  position: fixed;
   width: 5px;
   height: 5px;
   background-color: #fff;
@@ -24,5 +24,5 @@ const StarWrapper = styled.div<{ top: string; left: string }>`
   left: ${(props) => props.left};
   border-radius: 50%;
   z-index: 3;
-  filter: blur(1.5px);
+  filter: blur(1px);
 `;
